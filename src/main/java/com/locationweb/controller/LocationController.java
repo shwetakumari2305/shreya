@@ -16,7 +16,6 @@ import com.locationweb.services.LocationService;
 import com.locationweb.utility.EmailService;
 
 @Controller
-@RequestMapping("/hello")
 public class LocationController {
 
 	@Autowired
@@ -29,6 +28,10 @@ public class LocationController {
 	
 	@RequestMapping("show")
 	public String showLocationPage() {
+		return "create_location"; 
+	}
+	@GetMapping("show")
+	public String showLocation() {
 		return "create_location"; 
 	}
 	
