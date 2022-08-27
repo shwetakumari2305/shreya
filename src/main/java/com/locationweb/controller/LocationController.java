@@ -33,6 +33,7 @@ public class LocationController {
 	
 	@GetMapping("/show")
 	public String showLocation() {
+		System.out.println("Shweta Project");
 		return "create_location"; 
 	}
 	
