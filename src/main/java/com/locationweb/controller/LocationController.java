@@ -26,11 +26,12 @@ public class LocationController {
 	
 	//handler method
 	
-	@RequestMapping("show")
-	public String showLocationPage() {
-		return "create_location"; 
-	}
-	@GetMapping("show")
+// 	@RequestMapping("/show")
+//	public String showLocationPage() {
+//		return "create_location"; 
+//	}
+	
+	@GetMapping("/show")
 	public String showLocation() {
 		return "create_location"; 
 	}
@@ -72,7 +73,7 @@ public class LocationController {
 		return "create_location";
 	}
 	
-	@RequestMapping("listall")
+	@RequestMapping("/listall")
 	public String listAll(ModelMap model) {
 		List<Locations> locations = locationService.getAllLocations();
 		model.addAttribute("locations" , locations);
